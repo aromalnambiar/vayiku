@@ -1,0 +1,30 @@
+{% extends 'users/auth_base.html' %}
+{% load static %}
+{% block content %}
+   <input type="checkbox" id="check">
+    <div class="login form">
+
+      <header>Register</header>
+      <form class="reg" action="" method="POST">
+        {% csrf_token %}
+        {% for fields in form %}
+        <p>{{fields.label}}</p>
+        {{fields}}
+        {% endfor %}
+        {% if error %}
+           <p class="error">
+            {{message}}
+           </p>
+        {% endif %}
+         
+        <input type="submit" class="button" value="Signup">
+      </form>
+
+      <div class="signup">
+        <span class="signup">Already have an account?
+         <a href="{% url 'users:login' %}" for="check">Login</a>
+        </span>
+      </div>
+
+    </div> 
+{% endblock content %}

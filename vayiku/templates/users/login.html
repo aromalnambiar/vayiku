@@ -1,17 +1,7 @@
-<!DOCTYPE html>
+{% extends 'users/auth_base.html' %}
 {% load static %}
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{{title}}</title>
-  
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-
-  <div class="container">
+{% block content %}
+ 
     <input type="checkbox" id="check">
     <div class="login form">
 
@@ -32,12 +22,11 @@
 
       <div class="signup">
         <span class="signup">Don't have an account?
-         <label for="check">Signup</label>
+         <a href="{% url 'users:signup' %}" for="check">Signup</a>
         </span>
       </div>
 
     </div>
-    </div>
-  </div>
-</body>
-</html>
+  
+{% endblock content %}
+

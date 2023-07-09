@@ -93,3 +93,14 @@ body{
   color:red;
   margin-top: 10px;
 }
+
+.reg input{
+   height: 40px;
+   width: 100%;
+   padding: 0 10px;
+   font-size: 15px;
+   margin-bottom: 1.0rem;
+   border: 1px solid #ddd;
+   border-radius: 6px;
+   outline: none;
+}
