@@ -104,3 +104,11 @@ body{
    border-radius: 6px;
    outline: none;
 }
+
+ul li{
+  color:red;
+  list-style: none;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: -15px;
+}

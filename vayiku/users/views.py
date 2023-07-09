@@ -4,6 +4,7 @@ from django.contrib.auth import authenticate, login as auth_login, logout as aut
 from django.http.response import HttpResponseRedirect
 
 from users.forms import UserForm
+from main.function import get_error
 
 # views for login
 def login(request):
@@ -58,9 +59,22 @@ def signup(request):
             
             # login the created user
             user = authenticate(request=request, username=instance.username, password=instance.password)
-            if user is not None:
-                auth_login(request, user)
-                return HttpResponseRedirect("/")
+            auth_login(request, user)
+
+
+            return HttpResponseRedirect("/")
+            
+        else:
+            message = get_error(form)
+
+            form = UserForm()
+            context = {
+                "title" : "Sign Up",
+                "form" : form,
+                "error" : True,
+                "message" : message,
+            }
+            return render(request, "users/signup.html" , context)
 
     else:
         form = UserForm()
