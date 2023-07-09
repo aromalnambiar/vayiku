@@ -6,4 +6,6 @@ app_name = 'users'
 urlpatterns = [
     # loginpage
     path('login/', views.login, name='login'),
+    #login
+    path('logout/', views.logout, name='logout'),
 ]

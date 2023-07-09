@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from django.contrib.auth import authenticate, login as auth_login
+from django.shortcuts import render, reverse
+from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 from django.http.response import HttpResponseRedirect
 
 # views for login
@@ -30,3 +30,9 @@ def login(request):
             "title" : "Login",
         }
     return render(request, 'users/login.html', context)
+
+
+# view for login
+def logout(request):
+    auth_logout(request)
+    return HttpResponseRedirect("/")

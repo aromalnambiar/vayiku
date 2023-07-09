@@ -21,7 +21,13 @@
         <input type="text" name="username" placeholder="Enter your email">
         <input type="password" name="password" placeholder="Enter your password">
         <a href="#">Forgot password?</a>
-        <input type="button" class="button" value="Login">
+        {% if error %}
+           <p class="error">
+            {{message}}
+           </p>
+        {% endif %}
+         
+        <input type="submit" class="button" value="Login">
       </form>
 
       <div class="signup">
