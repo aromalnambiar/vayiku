@@ -42,18 +42,21 @@ def logout(request):
 
 # view for the signup
 def signup(request):
+    # checking the data in the form
     if request.method == "POST":
         form = UserForm(request.POST)
         if form.is_valid():
+            # creating user
             instance = form.save(commit=False)
-            User.object.create_user(
+            User.objects.create_user(
                 first_name=instance.first_name,
                 last_name=instance.last_name,
                 username=instance.username,
                 email=instance.email,
                 password=instance.password,
             )
-
+            
+            # login the created user
             user = authenticate(request=request, username=instance.username, password=instance.password)
             if user is not None:
                 auth_login(request, user)

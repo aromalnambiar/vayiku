@@ -7,10 +7,14 @@
       <header>Register</header>
       <form class="reg" action="" method="POST">
         {% csrf_token %}
-        {% for fields in form %}
-        <p>{{fields.label}}</p>
-        {{fields}}
-        {% endfor %}
+
+          {% for fields in form %}
+
+            <p>{{fields.label}}</p>
+            {{fields}}
+            
+          {% endfor %}
+
         {% if error %}
            <p class="error">
             {{message}}
