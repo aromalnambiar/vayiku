@@ -1,0 +1,44 @@
+
+.create_post{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+   
+}
+
+.create_post input,
+.create_post textarea {
+    width: 100%;
+    border: 1px solid #000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Valid box-shadow property */
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.create_post label{
+    font-size: 20px;
+}
+
+.s-footer{
+    display: none;
+}
+
+.create_post .checkbox{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    
+}
+
+.create_post .draft input{
+    max-width: 20px;
+    margin-right: 20px;
+}
+
+.submit{
+    padding: 0!important;
+    max-width: 200px;
+    margin: auto!important;
+    justify-content: center;
+}
