@@ -1,35 +1,205 @@
-<!DOCTYPE html>
+{% extends 'web/index_base.html' %}
 {% load static %}
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{{title}}</title>
-  
-  <link rel="stylesheet" href="{% static 'css/home_style.css' %}">
-</head>
-<body>
-    {% comment %} header {% endcomment %}
-    <header>
-        <h1>
-            <a href="">
-                <img src="{% static 'img/logo.png' %}" />
-            </a>
-        </h1>
-        <div class="right">
-            {% if request.user.is_authenticated %}
-                <span>{{request.user.first_name}} {{request.user.last_name}}</span>
-                <a href="{% url 'users:logout' %}"> Logout </a>
-            {% else %}
-                <a href="{% url 'users:login' %}"> Login </a>
-            {% endif %} 
-        </div>
-    </header>    
+{% block content %}
 
-    <div class="container">
+     
+            <article class="masonry__brick entry format-standard animate-this">
+              <div class="entry__thumb">
+                <a href="single-standard.html" class="entry__thumb-link">
+                  <img
+                    src=" {% static 'img/home/thumbs/masonry/woodcraft-600.jpg' %} "
+                    alt=""
+                  />
+                </a>
+              </div>
 
-    </div>
-  
-</body>
-</html>
+              <div class="entry__text">
+                <div class="entry__header">
+                  <h2 class="entry__title">
+                    <a href="single-standard.html"
+                      >Just a Standard Format Post.</a
+                    >
+                  </h2>
+                  <div class="entry__meta">
+                    <span class="entry__meta-cat">
+                      <a href="category.html">Design</a>
+                      <a href="category.html">Photography</a>
+                    </span>
+                    <span class="entry__meta-date">
+                      <a href="single-standard.html">Apr 29, 2019</a>
+                    </span>
+                  </div>
+                </div>
+                <div class="entry__excerpt">
+                  <p>
+                    Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua
+                    incididunt mollit id et sit proident dolor nulla sed commodo
+                    est ad minim elit reprehenderit nisi officia aute incididunt
+                    velit sint in aliqua...
+                  </p>
+                </div>
+              </div>
+            </article>
+            <!-- end article -->
+
+
+            <article class="masonry__brick entry format-standard animate-this">
+              <div class="entry__thumb">
+                <a href="single-standard.html" class="entry__thumb-link">
+                  <img
+                    src=" {% static 'img/home/thumbs/masonry/woodcraft-600.jpg' %} "
+                    alt=""
+                  />
+                </a>
+              </div>
+
+              <div class="entry__text">
+                <div class="entry__header">
+                  <h2 class="entry__title">
+                    <a href="single-standard.html"
+                      >Just a Standard Format Post.</a
+                    >
+                  </h2>
+                  <div class="entry__meta">
+                    <span class="entry__meta-cat">
+                      <a href="category.html">Design</a>
+                      <a href="category.html">Photography</a>
+                    </span>
+                    <span class="entry__meta-date">
+                      <a href="single-standard.html">Apr 29, 2019</a>
+                    </span>
+                  </div>
+                </div>
+                <div class="entry__excerpt">
+                  <p>
+                    Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua
+                    incididunt mollit id et sit proident dolor nulla sed commodo
+                    est ad minim elit reprehenderit nisi officia aute incididunt
+                    velit sint in aliqua...
+                  </p>
+                </div>
+              </div>
+            </article>
+            <!-- end article -->
+
+           
+            <article class="masonry__brick entry format-standard animate-this">
+              <div class="entry__thumb">
+                <a href="single-standard.html" class="entry__thumb-link">
+                  <img
+                    src=" {% static 'img/home/thumbs/masonry/woodcraft-600.jpg' %} "
+                    alt=""
+                  />
+                </a>
+              </div>
+
+              <div class="entry__text">
+                <div class="entry__header">
+                  <h2 class="entry__title">
+                    <a href="single-standard.html"
+                      >Just a Standard Format Post.</a
+                    >
+                  </h2>
+                  <div class="entry__meta">
+                    <span class="entry__meta-cat">
+                      <a href="category.html">Design</a>
+                      <a href="category.html">Photography</a>
+                    </span>
+                    <span class="entry__meta-date">
+                      <a href="single-standard.html">Apr 29, 2019</a>
+                    </span>
+                  </div>
+                </div>
+                <div class="entry__excerpt">
+                  <p>
+                    Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua
+                    incididunt mollit id et sit proident dolor nulla sed commodo
+                    est ad minim elit reprehenderit nisi officia aute incididunt
+                    velit sint in aliqua...
+                  </p>
+                </div>
+              </div>
+            </article>
+            <!-- end article -->
+
+
+            <article class="masonry__brick entry format-standard animate-this">
+              <div class="entry__thumb">
+                <a href="single-standard.html" class="entry__thumb-link">
+                  <img
+                    src=" {% static 'img/home/thumbs/masonry/woodcraft-600.jpg' %} "
+                    alt=""
+                  />
+                </a>
+              </div>
+
+              <div class="entry__text">
+                <div class="entry__header">
+                  <h2 class="entry__title">
+                    <a href="single-standard.html"
+                      >Just a Standard Format Post.</a
+                    >
+                  </h2>
+                  <div class="entry__meta">
+                    <span class="entry__meta-cat">
+                      <a href="category.html">Design</a>
+                      <a href="category.html">Photography</a>
+                    </span>
+                    <span class="entry__meta-date">
+                      <a href="single-standard.html">Apr 29, 2019</a>
+                    </span>
+                  </div>
+                </div>
+                <div class="entry__excerpt">
+                  <p>
+                    Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua
+                    incididunt mollit id et sit proident dolor nulla sed commodo
+                    est ad minim elit reprehenderit nisi officia aute incididunt
+                    velit sint in aliqua...
+                  </p>
+                </div>
+              </div>
+            </article>
+            <!-- end article -->
+
+
+            <article class="masonry__brick entry format-standard animate-this">
+              <div class="entry__thumb">
+                <a href="single-standard.html" class="entry__thumb-link">
+                  <img
+                    src=" {% static 'img/home/thumbs/masonry/woodcraft-600.jpg' %} "
+                    alt=""
+                  />
+                </a>
+              </div>
+
+              <div class="entry__text">
+                <div class="entry__header">
+                  <h2 class="entry__title">
+                    <a href="single-standard.html"
+                      >Just a Standard Format Post.</a
+                    >
+                  </h2>
+                  <div class="entry__meta">
+                    <span class="entry__meta-cat">
+                      <a href="category.html">Design</a>
+                      <a href="category.html">Photography</a>
+                    </span>
+                    <span class="entry__meta-date">
+                      <a href="single-standard.html">Apr 29, 2019</a>
+                    </span>
+                  </div>
+                </div>
+                <div class="entry__excerpt">
+                  <p>
+                    Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua
+                    incididunt mollit id et sit proident dolor nulla sed commodo
+                    est ad minim elit reprehenderit nisi officia aute incididunt
+                    velit sint in aliqua...
+                  </p>
+                </div>
+              </div>
+            </article>
+            <!-- end article -->
+
+{% endblock content %}
