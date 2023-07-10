@@ -9,7 +9,9 @@ urlpatterns = [
     # urls for app users
     path('users/', include("users.urls", namespace="users")),
     #root url aka web module
-    path('', include("web.urls", namespace="web"))
+    path('', include("web.urls", namespace="web")),
+    #post url for post
+    path("post/", include("post.urls", namespace="post")),
 ]
 
 
