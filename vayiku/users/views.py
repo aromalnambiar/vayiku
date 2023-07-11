@@ -5,6 +5,7 @@ from django.http.response import HttpResponseRedirect
 
 from users.forms import UserForm
 from main.function import get_error
+from post.models import Author
 
 # views for login
 def login(request):
@@ -56,6 +57,8 @@ def signup(request):
                 email=instance.email,
                 password=instance.password,
             )
+
+            Author.objects.create(name=instance.first_name, user=user)
             
             # login the created user
             user = authenticate(request=request, username=instance.username, password=instance.password)

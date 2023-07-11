@@ -3632,7 +3632,7 @@ body.search-is-visible {
 }
 
 .site-logo p{
-  margin-bottom: -30px!important;
+  margin-bottom: 0px!important;
 }
 
 .login{
