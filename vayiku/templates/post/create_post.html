@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 
-<form action="" method="POST" class="create_post ajax">
+<form action="" method="POST" class="create_post ajax" enctype="multipart/form-data">
 
     {% csrf_token %}
     <div class="form-container">
